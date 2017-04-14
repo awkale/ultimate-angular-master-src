@@ -1,7 +1,9 @@
 function ordinal() {
 	return function(value) {
 		var suffix = '';
+        // gives last digit
 		var last = value % 10;
+        // check for more than 2 digits
 		var specialLast = value % 100;
 		if (!value || value < 1) {
 			return value;
