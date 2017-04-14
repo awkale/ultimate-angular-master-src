@@ -16,6 +16,7 @@
 
 			<label>
 				Username
+                <!-- ng-model="checkout.details.username" - binds username -->
 				<input
 					type="text"
 					name="username"
@@ -26,6 +27,7 @@
 
 			<label>
 				Password
+                <!-- ng-model="checkout.details.password" - binds pwd -->
 				<input
 					placeholder="Password"
 					type="password"
@@ -36,6 +38,7 @@
 
 			<label>
 				Coupon
+                <!-- ng-model="checkout.details.coupon" - binds coupon -->
 				<input
 					placeholder="Coupon"
 					type="text"
@@ -43,6 +46,7 @@
 					ng-model="checkout.details.coupon"
 					required="required"
 					coupon-format>
+                    <!-- coupon-format - bound directive couponFormat; controls view display & model -->
 			</label>
 
 			<button type="submit">

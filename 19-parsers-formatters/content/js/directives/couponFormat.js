@@ -4,7 +4,7 @@ function couponFormat() {
 		link: function ($scope, $elem, $attrs, $ctrl) {
 
 			var ngModelCtrl = $ctrl;
-
+            // $formatters - collection of functions that get run against model values
 			ngModelCtrl.$formatters.unshift(function (value) {
 				// coupon: 'summer-50' -> 'SUMMER_50'
 				return value.replace(/-/g, '_').toUpperCase();
