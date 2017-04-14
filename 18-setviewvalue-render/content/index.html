@@ -14,6 +14,7 @@
 	<body>
 
 		<div ng-controller="HTMLController as html">
+            <!-- html-editor is directive; contenteditable is new feature in browser that allows editing and fires input event-->
 			<div html-editor contenteditable ng-model="html.content">
 				Some
 			</div>
