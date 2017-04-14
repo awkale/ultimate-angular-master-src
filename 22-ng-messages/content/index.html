@@ -36,12 +36,11 @@
 			<!--
 			This is the old way without the ngMessages module
 			<div
-				ng-if="register.username.$touched"
-				ng-messages="register.username.$error">
-				<div ng-message="required">
+				ng-if="register.username.$touched">
+				<div ng-if="register.username.$error.required">
 					This is field required!
 				</div>
-				<div ng-message="minlength">
+				<div ng-if="register.username.$error.minlength">
 					Minimum of 2 characters
 				</div>
 			</div>
