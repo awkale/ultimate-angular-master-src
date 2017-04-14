@@ -45,6 +45,8 @@
 					coupon-format>
 			</label>
 
+            <!-- show only when error -->
+            <!-- name="register" from form and name="coupon" from input -->
 			<div ng-if="register.coupon.$error.coupon">
 				Invalid coupon!
 				Must be characters, followed by an underscore and 2 digits.

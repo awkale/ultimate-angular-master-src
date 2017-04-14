@@ -15,8 +15,11 @@ function couponFormat() {
 				return value.replace(/_/g, '-').toLowerCase();
 			});
 
+            // not an array, passing model and view values
 			ngModelCtrl.$validators.coupon = function (modelValue, viewValue) {
-				var COUPON_REGEX = /[A-Z]+\_\d{2}/;
+                // what to test
+                var COUPON_REGEX = /[A-Z]+\_\d{2}/;
+                // boolean value only testing view value
 				return COUPON_REGEX.test(viewValue);
 			};
 
