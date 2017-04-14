@@ -17,6 +17,7 @@
 			<a href="" ng-click="gender = 'male'">Male</a>
 			<a href="" ng-click="gender = 'female'">Female</a>
 			<ul>
+                <!-- gender:gender - filter with argument -->
 				<li ng-repeat="player in tournament.players | gender:gender | orderBy:'rank'" ng-class="{
 					male: player.gender === 'male',
 					female: player.gender === 'female'

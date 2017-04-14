@@ -1,5 +1,6 @@
 function gender() {
 	return function(collection, gender) {
+        // checking if gender supplied, if not gender show all
 		if (!gender) return collection;
 		// var filtered = [];
 		// for (var i = 0; i < collection.length; i++) {
