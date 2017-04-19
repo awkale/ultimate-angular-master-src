@@ -1,3 +1,4 @@
+// hold all details and acts as navigation to import
 var contactMethods = {
 	template: `
 		<div>
