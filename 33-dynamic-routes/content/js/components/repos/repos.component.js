@@ -24,6 +24,7 @@ var repos = {
 			</ul>
 		</div>
 	`,
+    // $state has methods like .go
 	controller: function ($state) {
 		this.submitForm = function () {
 			$state.go('repos', {
@@ -46,7 +47,9 @@ angular
 				},
 				resolve: {
 					list: function (ReposService, $transition$) {
+                        // .params() returns object
 						var params = $transition$.params().username;
+                        // stops if null
 						if (!params) return;
 						return ReposService.getRepos(params);
 					}

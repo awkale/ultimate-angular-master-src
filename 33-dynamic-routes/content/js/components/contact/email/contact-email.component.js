@@ -12,6 +12,7 @@ angular
 			.state('contact.email', {
 				url: '/email',
 				views: {
+                    // shorthand without another object using component: contactEmail
 					'details@contact': 'contactEmail'
 				}
 			});
