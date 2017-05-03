@@ -1,5 +1,7 @@
+// inject $q for errors
 function MyHttpInterceptor(TODO_API, $q) {
 	return {
+        // each property is optional, request is a function is a config object passed through to http
 		request: function (config) {
 			if (config.url === TODO_API) {
 				config.headers['x-csrf-token'] = 'toddmotto';
