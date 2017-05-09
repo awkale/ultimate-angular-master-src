@@ -8,6 +8,7 @@ describe('GenderFilter', function () {
 	}));
 
 	it('should filter out based on gender', function () {
+        // array of objects
 		var list = [{
 			name: 'john doe',
 			gender: 'male'
@@ -18,6 +19,7 @@ describe('GenderFilter', function () {
 
 		var result = $filter('gender')(list, 'male');
 		expect(result.length).toBe(1);
+        // first item in array and check name
 		expect(result[0].name).toEqual('john doe');
 	});
 });
