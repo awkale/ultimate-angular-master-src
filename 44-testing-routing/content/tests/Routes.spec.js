@@ -3,13 +3,15 @@ describe('Routes', function () {
 
 	beforeEach(module('app'));
 
-	beforeEach(inject(function ($injector) {
+	beforeEach(inject(functi on ($injector) {
+        // provided by uiRouter
 		$state = $injector.get('$state');
 		$http = $injector.get('$http');
 		$httpBackend = $injector.get('$httpBackend');
 
 		$httpBackend
 			.when('GET', 'views/home.html')
+            // ui router will try to fetch template which won't exist; so empty string is in the response
 			.respond('');
 
 		$httpBackend
@@ -26,8 +28,9 @@ describe('Routes', function () {
 		var state;
 
 		it('should have the correct URL', function () {
+            // fetch home state by ui router
 			state = $state.get('home');
-
+            // console.log('STATE', state) to see what ojbect looks like
 			expect(state.url).toEqual('/');
 		});
 
